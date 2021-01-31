@@ -1,5 +1,6 @@
 import pygame
 import os
+import sys
 import random
 
 pygame.init()
@@ -255,6 +256,8 @@ def menu(death_count):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
+                pygame.quit()
+                sys.exit()
             if event.type == pygame.KEYDOWN:
                 main()
 
